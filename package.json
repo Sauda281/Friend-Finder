@@ -1,0 +1,21 @@
+{
+  "name": "friend-finder",
+  "version": "1.0.0",
+  "description": "This is a dating app that will take results from users' surveys, and then compare their answers with those from other users.",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sauda281/Friend-Finder"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
