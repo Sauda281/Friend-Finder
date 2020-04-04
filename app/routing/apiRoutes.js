@@ -1,25 +1,25 @@
-var friendsMatch = require("../data/friends.js");
+var friends = require('../data/friends.js');
 
 module.exports = function(app){
-    app.get('/api/friends', function (req,res){
-        res.json(friendsMatch);
+    app.get('/api/friends', function (req, res){
+        res.json(friends);
     });
 
-    app.post("/api/friends", function(req, res){
+    app.post('/api/friends', function(req, res){
 
         var newFriend = req.body;
         for(var i = 0; i< newFriend.scores.lenght; i++){
-            if(newFriend.scores[i]== "1(Yes)"){
+            if(newFriend.scores[i]== "1(Strongly disagree)"){
                 newFriend.scores[i]= 1;
-            }else if (newFriend.scores[i]=="3(No)"){
-                newFriend.scores[i]= 3;
+            }else if (newFriend.scores[i]=="5(Strongly agree)"){
+                newFriend.scores[i]= 5;
             }else {
                 newFriend.scores[i] = parseInt(newFriend.scores[i]);
             }
         }
         var comparisonArray = [];
-        for(var i = 0; i < friendsMatch.lenght; i++);
-        var comparedFriend = friendMatch[i];
+        for(var i = 0; i < friends.lenght; i++);
+        var comparedFriend = friends[i];
         var totalDifference = 0
 
         for(var k =0; k < comparedFriend.scores.lenght; k++){
@@ -29,18 +29,19 @@ module.exports = function(app){
 
         comparisonArray[i] = totalDifference;
 
-        var bestFriendNumb = comparisonArray[0];
+        var bestFriendNum = comparisonArray[0];
         var bestFriend = 0;
 
         for(var i = 1; i< comparisonArray.length; i ++){
-            if(comparisonArray[i]< bestFriendNumb){
-                bestFriendNumb = comparisonArray[i];
+            if(comparisonArray[i]< bestFriendNum){
+                bestFriendNum = comparisonArray[i];
                 bestFriend = i;
             }
         }
 
-        friendsMatch.push(newFriend);
+        friends.push(newFriend);
         
-        res.json(friendsMatch[bestFriendI]);
+        res.json(friends[bestFriendI]);
+        console.log(newFriend);
     });
 }

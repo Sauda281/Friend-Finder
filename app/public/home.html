@@ -3,40 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Home Page</title>
+    <div class = "jumbotron">
+        <div class = "container">
+            <a class = "fa fa-handshake-o"><h1>Friend Finder</h1></a>
+            <hr>
+            <p><h3>Answer a few basic quetions</h3></p>
+            <p><h3>Then find the friend with the greatest compatibility</h3></p>
+        </div>
 
-    <style type = text/css>
-    body{
-        background-color: white;
-    }
-    #link{
-        color: white;
-    }
-
-    .container{
-        color: teal;
-    }
-    </style>
+    <a href="/survey"><button type = "button" class = "btn-lg btn-primary"><span class = "ta fa-server"></span>Go to Survey</button></a>
+    </div>
+    
 </head>
 <body>
- <div class ="jumbotron-fluid">
- </div class = container>
- <h1 class = display-3>Friend Finder</h1>
- <hr>
- <p class="lead"> Answer a few basic questions</p>
- <p>Then find the friend with the greatest compatibility</p>
- <a href="/survey"><button type = "button" class = "btn-lg btn-primary"><span class = "fa fa poll"></span>Go to Survey</button></a>
- </div>
-</div>
+    
 
-<footer class = "footer">
-    <div class ="container">
-        <p><a href = "/api/friends" id ="Link"> API Friends List |<a href = "https://github.com/Sauda281/Friend-Finder" id ="link">Github Repo</a></p>
+
+    <footer class = "footer">
+        <div class ="container">
+            <p><a href = "/api/friends" id ="link"> API Friends List</a>| <a href = "https://github.com/Sauda281/Friend-Finder" id ="link">Github Repo</a></p>
+        </div>
+    </footer>
     </div>
-</footer>
-</div>
+  <script type="text/javascript" src="javascript/jquery/jquery-2.2.4.min.js"></script>
     
 </body>
 </html>
+
+<style>
+    .fa{
+        font-size: 55px;
+        padding: 5px;
+        background-color: palevioletred;
+        
+    }
+    h1{
+        display: inline;
+        padding-right: 5px;
+        color: white;
+        font-size: 50px;
+        font-weight: 500;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    body{
+        background-image: url("https://images.pexels.com/photos/1764335/pexels-photo-1764335.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    }
+
+    .ta{
+        padding: 5px;
+        font-size: 35px;
+    }
+    .btn-lg{
+        padding: 5px;
+        margin-left: 105px;
+        margin-top: 20px;
+    }
+
+    button{
+        padding: 5px;
+    }
+</style>
