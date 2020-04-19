@@ -8,7 +8,8 @@ module.exports = function(app){
     app.post('/api/friends', function(req, res){
 
         var newFriend = req.body;
-        for(var i = 0; i< newFriend.scores.lenght; i++){
+        console.log(newFriend)
+        for(var i = 0; i< newFriend.scores.length; i++){
             if(newFriend.scores[i]== "1(Strongly disagree)"){
                 newFriend.scores[i]= 1;
             }else if (newFriend.scores[i]=="5(Strongly agree)"){
@@ -18,11 +19,11 @@ module.exports = function(app){
             }
         }
         var comparisonArray = [];
-        for(var i = 0; i < friends.lenght; i++);
+        for(var i = 0; i < friends.length; i++);
         var comparedFriend = friends[i];
         var totalDifference = 0
 
-        for(var k =0; k < comparedFriend.scores.lenght; k++){
+        for(var k =0; k < comparedFriend.scores.length; k++){
             var differenceOneScore = Math.abs(comparedFriend.scores[k]- newFriend.scores[k]);
             totalDifference += differenceOneScore;
         }

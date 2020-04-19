@@ -36,7 +36,7 @@
         </div>
         <div class = "panel panel-default">
             <div class = "panel-heading">
-            <!-- <h3 class = "panel-title"><strong>Questionnaire</strong></h3> -->
+            <h3 class = "panel-title"><strong>Questionnaire</strong></h3>
             </div>
             <div class = "panel-body">
             
@@ -47,8 +47,8 @@
                 <option value="1">1 (Strongly disagree)</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
-                <option value="3">4</option>
-                <option value="3">5(Strongly agree)</option>
+                <option value="4">4</option>
+                <option value="5">5(Strongly agree)</option>
             </select>
 
             <h4><strong>Question 2</strong></h4>
@@ -58,8 +58,8 @@
                 <option value="1">1 (Strongly disagree)</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
-                <option value="3">4</option>
-                <option value="3">5(Strongly agree)</option>
+                <option value="4">4</option>
+                <option value="5">5(Strongly agree)</option>
             </select>
 
             <h4><strong>Question 3</strong></h4>
@@ -69,8 +69,8 @@
                 <option value="1">1 (Strongly disagree)</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
-                <option value="3">4</option>
-                <option value="3">5(Strongly agree)</option>
+                <option value="4">4</option>
+                <option value="5">5(Strongly agree)</option>
             </select>
 
             <h4><strong>Question 4</strong></h4>
@@ -80,8 +80,8 @@
                 <option value="1">1 (Strongly disagree)</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
-                <option value="3">4</option>
-                <option value="3">5(Strongly agree)</option>
+                <option value="4">4</option>
+                <option value="5">5(Strongly agree)</option>
             </select>
 
             <h4><strong>Question 5</strong></h4>
@@ -91,8 +91,8 @@
                 <option value="1">1 (Strongly disagree)</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
-                <option value="3">4</option>
-                <option value="3">5(Strongly agree)</option>
+                <option value="4">4</option>
+                <option value="5">5(Strongly agree)</option>
             </select>
 
             <h4><strong>Question 6</strong></h4>
@@ -102,8 +102,8 @@
                 <option value="1">1 (Strongly disagree)</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
-                <option value="3">4</option>
-                <option value="3">5(Strongly agree)</option>
+                <option value="4">4</option>
+                <option value="5">5(Strongly agree)</option>
             </select>
 
             <h4><strong>Question 7</strong></h4>
@@ -113,8 +113,8 @@
                 <option value="1">1 (Strongly disagree)</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
-                <option value="3">4</option>
-                <option value="3">5(Strongly agree)</option>
+                <option value="4">4</option>
+                <option value="5">5(Strongly agree)</option>
             </select>
 
             <h4><strong>Question 8</strong></h4>
@@ -124,8 +124,8 @@
                 <option value="1">1 (Strongly disagree)</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
-                <option value="3">4</option>
-                <option value="3">5(Strongly agree)</option>
+                <option value="4">4</option>
+                <option value="5">5(Strongly agree)</option>
             </select>
 
             <h4><strong>Question 9</strong></h4>
@@ -135,8 +135,8 @@
                 <option value="1">1 (Strongly disagree)</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
-                <option value="3">4</option>
-                <option value="3">5(Strongly agree)</option>
+                <option value="4">4</option>
+                <option value="5">5(Strongly agree)</option>
             </select>
 
             <h4><strong>Question 10</strong></h4>
@@ -146,8 +146,8 @@
                 <option value="1">1 (Strongly disagree)</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
-                <option value="3">4</option>
-                <option value="3">5(Strongly agree)</option>
+                <option value="4">4</option>
+                <option value="5">5(Strongly agree)</option>
             </select>
             </div>
         </div>
@@ -206,30 +206,31 @@
             return completeForm;
              }
 
-         if(newForm()=== true){
+         if(newForm() == true){
              var newFriend ={
                 name: $("#formName").val().trim(),
                 profilePic: $("#formImage").val().trim(),
                 scores:[
-                    $("#1").val(),
-                    $("#2").val(),
-                    $("#3").val(),
-                    $("#4").val(),
-                    $("#5").val(),
-                    $("#6").val(),
-                    $("#7").val(),
-                    $("#8").val(),
-                    $("#9").val(),
-                    $("#10").val(),
+                    $("#Q1").val(),
+                    $("#Q2").val(),
+                    $("#Q3").val(),
+                    $("#Q4").val(),
+                    $("#Q5").val(),
+                    $("#Q6").val(),
+                    $("#Q7").val(),
+                    $("#Q8").val(),
+                    $("#Q9").val(),
+                    $("#Q10").val(),
                     
                 ]
              };
              var currentURL = window.location.origin;
 
-             $.post(currentURL +"/api/friends", newFriend, function(data){
+             $.post(currentURL + "/api/friends", newFriend, function(data){
 
                 $("#matchName").text(data.name);
                 $("#matchImg").attr("src",data.photo);
+                
                 $("#resultsModal").modal("toggle");
                 
              });
