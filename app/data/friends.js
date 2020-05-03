@@ -30,7 +30,7 @@ var friends = [
     "2",
     "5"
 ], 
-},{
+}, {
     name: "Bucks Bunny",
     photo: "https://st3.depositphotos.com/2681805/16289/i/1600/depositphotos_162898934-stock-photo-small-white-bunny-rabbit.jpg",
     scores: [
@@ -45,7 +45,7 @@ var friends = [
         "1",
         "5",
     ], 
-},{
+}, {
     name: "Donald Duck",
     photo: "https://i.pinimg.com/474x/04/58/ca/0458cafe2b5c04c75dc4afe9c692b929--daisy-duck-donald-duck.jpg",
     scores: [
