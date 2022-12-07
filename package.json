@@ -4,8 +4,8 @@
   "description": "This is a dating app that will take results from users' surveys, and then compare their answers with those from other users.",
   "main": "server.js",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
     "parser": "^0.1.4"
   },
   "repository": {
